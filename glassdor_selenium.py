@@ -17,12 +17,10 @@ driver = webdriver.Chrome(
     r"C:\Users\ansar\chromedriver\chromedriver.exe", options=options)
 driver.set_window_size(1920, 1080)
 
-# url = f"https://www.glassdoor.co.in/Job/machine-learning-engineer-jobs-SRCH_KO0,25_IP{i}.htm?includeNoSalaryJobs=true&pgc=AB4AAYEAHgAAAAAAAAAAAAAAAeKbLzkATQEBAQcAt9Hy9Ss3rAakbTyAZ74JZqgqrl7bqVQ2%2Fij8M5UPLwsVud%2FF4vm4n%2Fl7GP7Q4rwFYsVsaMfsgDBo5r0G8w0HTdrOkun5TU5TAAA%3D"
+# if u want to scrape the data for any other jb role eg:front end developer then just seacrh the job and paste the url in driver.get() and include {i} accordingly.
 all_data = []
 # set the range for the number of pages u want to scrape
 for i in range(1, 40):
-    # driver.get(
-    # f"https://www.glassdoor.co.in/Job/python-developer-jobs-SRCH_KO0,16_IP{i}.htm?includeNoSalaryJobs=true&pgc=AB4AAYEAHgAAAAAAAAAAAAAAAeHxmucASwECAQcUBgIUzfp645Ayp3kspMvaOH%2FMjzErD09kJGX9r58QkDhdFa8FQ73WDFpLAAZllNzjuwhyNnAIJ54P0Lw%2Bd%2B5mnVG3mYnr2QAA")
     driver.get(
         f"https://www.glassdoor.co.in/Job/machine-learning-engineer-jobs-SRCH_KO0,25_IP{i}.htm?includeNoSalaryJobs=true&pgc=AB4AAYEAHgAAAAAAAAAAAAAAAeKbLzkATQEBAQcAt9Hy9Ss3rAakbTyAZ74JZqgqrl7bqVQ2%2Fij8M5UPLwsVud%2FF4vm4n%2Fl7GP7Q4rwFYsVsaMfsgDBo5r0G8w0HTdrOkun5TU5TAAA%3D")
     time.sleep(5)
